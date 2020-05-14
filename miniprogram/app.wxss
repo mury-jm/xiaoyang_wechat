@@ -1,0 +1,26 @@
+.fl{
+  float: left;
+}
+
+.fr{
+  float:right;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  opacity: 0;
+}
+
+.clearfix{
+  zoom: 1;
+}
+.h1{
+  font-size:44rpx ;
+  font-weight: 700;
+}
+image{
+  width: 100%;
+}

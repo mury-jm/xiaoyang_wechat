@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/chart/chart",
+    "pages/tally/tally",
+    "pages/type/type"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fe8588",
+    "navigationBarTitleText": "小杨记账",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#fe8689",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./imgs/home.png",
+        "selectedIconPath": "./imgs/home_active.png"
+      },
+      {
+        "pagePath": "pages/tally/tally",
+        "text": "记账",
+        "iconPath": "./imgs/tally.png",
+        "selectedIconPath": "./imgs/tally_active.png"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "text": "图表",
+        "iconPath": "./imgs/chart.png",
+        "selectedIconPath": "./imgs/chart_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

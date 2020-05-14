@@ -1,0 +1,48 @@
+<!-- 灰色背景 -->
+<view class="ccc_background"></view>
+<!-- 标题页面 -->
+<view class="top_bac">
+	<view class="top_box clearfix">
+		<view class="imgs_box " wx:for="{{img_type}}" wx:key="index" bindtap="select_type" data-bool="{{item.bool}}" data-index="{{index}}" data-demo="{{img_type}}">
+			<image lazy-load="true" class="image {{item.bool ? 'active_imges' :''}}" src="{{item.icon_url}}" mode="widthFix"></image>
+			<text class="{{item.bool ? 'active_imges' :''}}">{{item.title}}</text>
+		</view>
+	</view>
+</view>
+
+<view class="choose_box">
+	<view class="choose_top clearfix">
+		<text class="fl">账户选择</text>
+		<view class="fl choose_top_r">
+		 <view class="fl {{item.bool ? 'active' : ''}}" wx:for="{{select}}" wx:key="index" bindtap="by_select" data-by_list="{{select}}" data-index = "{{index}}">{{item.tit}}</view>
+		</view>
+	</view>
+	<view class="choose_bottom clearfix">
+		<view class="bottomes fl {{item.bool ? 'bottomes_active' :''}}" wx:for="{{xuanze}}" wx:key="index" data-list="{{xuanze}}" data-index="{{index}}" bindtap="select_xuanze">
+			{{item.tit}}
+		</view>
+	</view>
+</view>
+
+<view class="input_box clearfix">
+	<view class="money clearfix">
+
+		<picker mode="date" start="{{dataRange.start}}" end="{{dataRange.end}}" bindchange="bindDateChange" data-title="time">
+			<text class="fl">日期</text>
+			<view class="fl date_box">{{getInfo.time}}</view>
+		</picker>
+	</view>
+	<view class="money clearfix" >
+		<text class="fl">金额</text>
+		<input class="fl" type="number" placeholder="输入记账金额"  bindchange="bindDateChange" data-title="money"/>
+	</view>
+	<view class="money clearfix">
+		<text class="fl">备注</text>
+		<input class="fl" type="text" placeholder="输入备注内容" bindchange="bindDateChange"  data-title="text"/>
+	</view>
+</view>
+
+
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="save_box" bindtap="save_data">
+	<text>保存</text>
+</button>

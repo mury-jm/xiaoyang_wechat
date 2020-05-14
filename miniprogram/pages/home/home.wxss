@@ -1,0 +1,156 @@
+/* miniprogram/pages/home/home.wxss */
+.top_bac{
+  height: 180rpx;
+  background-image: linear-gradient(to right , #fc9666 , #fd6363);
+  position: relative;
+  padding: 10% 5%;
+  margin-bottom: 100rpx;
+}
+.top_box{
+  position: absolute;
+  width: 90%;
+  background-color: white;
+  height: 340rpx;
+  border-radius: 40rpx;
+  box-shadow: 0px 3px 10px #a5a5a5;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.year_box{
+  margin-right: 12rpx;
+  text-align: center;
+}
+
+.year{
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.small_tr{
+  font-size: 20rpx;
+}
+
+.pick_box{
+  position: absolute;
+  right: 40rpx;
+  top: 50rpx;
+}
+
+.ddd_text{
+  margin-top: 60rpx;
+  color: #ccc;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.top_y{
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #ee8274;
+  margin-top: 38rpx;
+}
+
+.top_price{
+  font-size: 66rpx;
+  font-weight: 700;
+  color: #ee8274;
+}
+
+.content_price{
+  padding: 5%;
+  position: relative;
+}
+
+.content_left{
+  width: 50%;
+  height: 160rpx;
+  text-align: center;
+}
+
+.left_top{
+  margin: 20rpx;
+  color: #ccc;
+}
+
+.left_bottom{
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.content_cont{
+  width: 1px;
+  height: 60rpx;
+  position: absolute;
+  background-color: #ececec;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.item_box{
+  
+}
+
+.item{
+  margin: 0 20rpx;
+  color: #ccc;
+  position: relative;
+}
+
+.item_active{
+  font-size: 36rpx;
+  color: black;
+  font-weight: 700;
+}
+
+.item_active::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40rpx;
+  height: 6rpx;
+  bottom: -10rpx;
+  left: 50%;
+  margin-left: -20rpx;
+  background-color: #fd6363;
+}
+
+.ccc_text_box{
+  margin-top: 20rpx;
+  color: #ccc;
+  font-size: 26rpx;
+}
+.cc_text{
+  color: #d4d4d4;
+  margin: 0 20rpx;
+}
+
+.img_box{
+  margin: 30rpx 40rpx;
+  
+}
+
+.img{
+  width: 12%;
+}
+
+.img_text{
+  border-bottom: 1px solid #f4f4f4;
+  width: 88%;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.text_red{
+  color: #fb7563;
+}
+
+.text_green{
+  color: #92cf4a;
+}

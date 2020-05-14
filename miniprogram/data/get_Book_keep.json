@@ -1,0 +1,69 @@
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204452.png",
+  "type":"gouwu",
+  "title":"购物",
+  "bool":false
+}
+
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204547.png",
+  "type":"shucai",
+  "title":"蔬菜",
+  "bool":false
+}
+
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204620.png",
+  "type":"shuiguo",
+  "title":"水果",
+  "bool":false
+}
+
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204639.png",
+  "type":"lingshi",
+  "title":"零食",
+  "bool":false
+}
+
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204735.png",
+  "type":"yule",
+  "title":"娱乐",
+  "bool":false
+}
+
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204811.png",
+  "type":"tongxun",
+  "title":"通讯",
+  "bool":false
+}
+
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204842.png",
+  "type":"meirong",
+  "title":"美容",
+  "bool":false
+}
+
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204907.png",
+  "type":"yinshi",
+  "title":"饮食",
+  "bool":false
+}
+
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204933.png",
+  "type":"jiaotong",
+  "title":"交通",
+  "bool":false
+}
+
+{
+  "icon_url":"cloud://yangji.7961-yangji-1301840934/img/snipaste20200415_204953.png",
+  "type":"riyong",
+  "title":"日用",
+  "bool":false
+}

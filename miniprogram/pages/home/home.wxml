@@ -1,0 +1,77 @@
+<!-- 标题页面 -->
+<view class="top_bac">
+	<view class="top_box">
+		<text class="h1">生活账本</text>
+
+		<picker class="pick_box" mode="date" value="{{date}}" start="{{dataRange.start}}" end="{{dataRange.end}}" bindchange="bindDateChange">
+			<view class="fr year_box">
+				<view class="year">{{time.year}}</view>
+				<view class="h1">{{time.month}}月 <text class="small_tr">▼</text></view>
+			</view>
+		</picker>
+
+		<view class="ddd_text">预算余额</view>
+		<view class="clearfix ">
+			<text class="fl top_y">￥</text>
+			<view class="fl top_price">{{month_total.month_jieyu}}</view>
+		</view>
+	</view>
+</view>
+<!-- 收入 支出 -->
+<view class="content_price clearfix">
+	<view class="content_left fl">
+		<view class="left_top text_red">• 收入</view>
+		<view class="left_bottom text_red">￥ {{month_total.month_add}}</view>
+	</view>
+	<view class="content_cont"></view>
+	<view class="content_left fl">
+		<view class="left_top text_green">• 支出</view>
+		<view class="left_bottom text_green">￥ {{month_total.month_res}}</view>
+	</view>
+</view>
+<!-- 所有 收入 支出 -->
+<view class="item_box">
+	<text class="item {{item.isActive ? 'item_active' :''}}" wx:for="{{tabData}}" wx:key="index" data-title="{{item.title}}" data-type="{{item.type}}" data-isActive="{{item.isActive}}" bindtap="select_box" data-index="{{index}}" data-datas="{{tabData}}">{{item.title}}</text>
+</view>
+<!-- 下面计入时间  周几 -->
+<view class="ccc_text_box clearfix">
+	<view class="fl left_ccc">
+		<text class="cc_text">{{time.month}}月{{time.day}}日</text>
+		<text class="cc_text">{{time.week}}</text>
+	</view>
+	<view class="fr right_ccc">
+		<text class="cc_text">收入:{{total_sum.add_sum}}</text>
+		<text class="cc_text">支出:{{total_sum.res_sum}}</text>
+	</view>
+</view>
+
+
+<!-- 所有显示 -->
+<scroll-view wx:if="{{select_active == 0}}" scroll-y="true" style="height:340rpx;">
+	<view class="img_box clearfix" wx:for="{{titData}}" wx:key="index" scroll-y="true">
+		<image class="img fl" src="{{item.icon_url}}" mode="widthFix"></image>
+		<view class="fl img_text">
+			<text>{{item.text}}</text>
+			<text class="fr text_green" wx:if="{{item.const_type == 'zhichu'}}">-￥{{item.money}}</text>
+			<text class="fr text_red" wx:if="{{item.const_type == 'shouru'}}" >+￥{{item.money}}</text>
+		</view>
+	</view>
+</scroll-view>
+<scroll-view wx:if="{{select_active == 1}}" scroll-y="true" style="height:340rpx;">
+	<view wx:if="{{item.const_type == 'shouru'}}" class="img_box clearfix" wx:for="{{titData}}" wx:key="index" scroll-y="true">
+		<image class="img fl" src="{{item.icon_url}}" mode="widthFix"></image>
+		<view class="fl img_text">
+			<text>{{item.text}}</text>
+			<text class="fr text_red" wx:if="{{item.const_type == 'shouru'}}" >+￥{{item.money}}</text>
+		</view>
+	</view>
+</scroll-view>
+<scroll-view wx:if="{{select_active == 2}}" scroll-y="true" style="height:340rpx;">
+	<view wx:if="{{item.const_type == 'zhichu'}}"  class="img_box clearfix" wx:for="{{titData}}" wx:key="index" scroll-y="true">
+		<image class="img fl" src="{{item.icon_url}}" mode="widthFix"></image>
+		<view class="fl img_text">
+			<text>{{item.text}}</text>
+			<text class="fr text_green" wx:if="{{item.const_type == 'zhichu'}}">-￥{{item.money}}</text>
+		</view>
+	</view>
+</scroll-view>

@@ -1,0 +1,24 @@
+<view class="type">
+
+  <view class="items">
+
+    <view class="item clearfix" wx:for="{{typeDatas}}" wx:key="index">
+        <view class="fl item-icon">
+          <image class="auto-img img" src="{{item.icon_url}}" mode="widthFix"></image>
+        </view>
+        <view class="fl item-content">
+          <view class="fl">
+            <view class="clearfix">
+              <view class="fl item-title {{item.comment == '' ? 'active' : ''}}">{{item.img_title}}</view>
+              <view class="fl date {{item.comment == '' ? 'active' : ''}}">{{item.time}}</view>
+              <view class=" date {{item.comment == '' ? 'active' : ''}}">{{item.text}}</view>
+            </view>
+            <view class="comment" wx:if="{{item.comment != ''}}">{{item.comment}}</view>
+          </view>
+          <view class="fr money {{item.costType == 'zhichu' ? 'reduce' : 'add'}}">{{item.const_type == 'zhichu' ? '-' : '+'}}￥{{item.money}}</view>
+        </view>
+      </view>
+
+  </view>
+
+</view>
